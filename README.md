@@ -33,8 +33,7 @@ I configured three distinct S3 buckets to separate public and private resources,
 I created a dedicated IAM user `Tunde-user` with programmatic access credentials (Access Key & Secret Key). Instead of using AWS managed policies, I authored a custom policy that follows the **principle of least privilege**, granting only the exact permissions necessary for the user to perform its intended tasks and nothing more.
 
 ### Live Links
-*   **S3 Static Website Endpoint:** http://cloudlaunch-site-bucket.s3-website-us-east-1.amazonaws.com
-
+*   **S3 Static Website Endpoint:** http://tunde-assessment.s3-website.eu-north-1.amazonaws.com
 ### IAM Policy (JSON)
 The custom policy `CloudLaunchS3AccessPolicy` attached to the `tunde-user` is defined below:
 
