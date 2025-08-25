@@ -14,17 +14,17 @@ I configured three distinct S3 buckets to separate public and private resources,
 
 **S3 Buckets Configuration:**
 
-1.  **`cloudlaunch-site-bucket`**
+1.  **`Tunde-assessment`**
     *   **Purpose:** Hosts the public-facing static website for CloudLaunch.
     *   **Configuration:** Static website hosting was enabled. A bucket policy grants public read-only (`s3:GetObject`) access to the objects, allowing anyone to view the website.
     *   **Security:** All other public access settings are blocked, ensuring only the website files are exposed.
 
-2.  **`cloudlaunch-private-bucket`**
+2.  **`Tunde-assessment-private`**
     *   **Purpose:** Stores internal, private documents.
     *   **Configuration:** All public access is explicitly blocked at the bucket level. Access is solely controlled via IAM policies.
     *   **Permissions:** A designated IAM user has permission to upload (`PutObject`) and download (`GetObject`) files but cannot delete them or list the bucket's contents.
 
-3.  **`cloudlaunch-visible-only-bucket`**
+3.  **`Tunde-assessment-visible-only`**
     *   **Purpose:** Serves as a test case for granular permission control.
     *   **Configuration:** All public access is blocked.
     *   **Permissions:** The IAM user can see this bucket exists when listing all buckets (`ListBucket`) but is explicitly denied all permissions to read, write, or delete any of its contents, as required.
